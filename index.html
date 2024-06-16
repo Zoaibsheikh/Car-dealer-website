@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car dealer landing page - Zoaib sheikh</title>
+
+    <!--cutom css -->
+    <link rel="stylesheet" href="style.css">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
+    <!-- boxicons icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+     rel="stylesheet">
+</head>
+<body>
+       <!-- main menu-->
+       <header>
+             <a href="#"  class="logo">
+                 <img src="images/logo.png" alt="">
+             </a>
+
+             <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="header-icons">
+                 <a href="#"><i class='bx bxs-user'></i></a>
+                 <a href="#"><i class='bx bxs-cart-alt' ></i></a>
+                <div class='bx bx-menu-alt-right'id="menu-icon"></div>
+            </div>
+       </header>
+
+       <!--home section write by zoaib sheikh-->
+       <section class="home" id="home">
+            <div class="home-content">
+                 <div class="home-text">
+                    <P>Find cars for sale and for rent near
+                     you!</P>
+                    <h1>Find Your Dream Car</h1>
+                 </div>
+                 <form id="CarSearchForm">
+                    <div>
+                        <label for="make">Make :</label>
+                        <select  id="Make" onchange="showYears()">
+                        <option value="" abled selected>Select Make</option>
+                        <option value="audi">Audi</option>
+                        <option value="bentley">Bentley</option>
+                        <option value="bmw">BMW</option>
+                        <option value="ford">Ford</option>
+                        <option value="benz">Benz</option>
+                        <option value="nissan">Nissan</option>
+                        <option value="peugeot">Peugeot</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="honda">Honda</option>
+                        <option value="volkswagen">Volkswagen</option>
+                        </select>
+                    </div>
+                    <div id="years" class="hidden">
+                        <label for="years">Years of Manufactured</label>
+                        <select name="" id="years">
+                            <option value="disabled selected">Select Years</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            
+
+
+                        </select>
+                    </div>
+                    <div>
+                        <label for="budget">Budget in $</label>
+                        <input type="number" id="budget" placeholder="Enter Your Budget">
+                    </div>
+                    
+                    <button type="button" onclick="searchcars()">Search</button>
+                 </form>
+                 <div class="home-img">
+                     <img src="images/home1.png" alt="">
+                 </div>
+                </div>
+                </section>
+                <section class="container">
+                    <h2>Browse By Type</h2>
+                    <div class="container-box">
+                        <div class="container-img">
+                        <img src="images/SUV.png" width="70px" alt="">
+                    </div>
+                    <div class="container-text">
+                        <p>SUV</p>
+                    </div>
+                </div>
+                    
+
+                <div class="container-box">
+                        <div class="container-img">
+                        <img src="images/sedan.png" width="70px" alt="">
+                    </div>
+                    <div class="container-text">
+                        <p>SEDAN</p>
+                    </div>
+                </div>
+                    
+                   
+                    <div class="container-box">
+                        <div class="container-img">
+                        <img src="images/Coupe.png" width="70px" alt="">
+                    </div>
+                    <div class="container-text">
+                        <p>Coupe</p>
+                    </div>
+                    </div>
+                    
+                    <div class="container-box">
+                        <div class="container-img">
+                        <img src="images/Convertible.png" width="70px" alt="">
+                    </div>
+                    <div class="container-text">
+                        <p>Convertible</p>
+                    </div>
+                    </div>
+                </section>
+
+                 <section class="Categories" id="Categories">
+                        <div class="center-text">
+                        <h5>Popular Cars</h5>
+                        <h2>Most Sold Cars</h2>
+                        </div>
+                        <div class="Categories-content">
+                        <div class="box">
+                            <img src="images/toyota.png" width="100px">
+                            <h3>Toyota</h3>
+                            <p>12.5k sales</p>
+                        </div>
+
+                        
+                            <div class="box">
+                                <img src="images/Honda.png" width="100px">
+                                <h3>Honda</h3>
+                                <p>9.2k sales</p>
+                            </div>
+
+                        
+                                <div class="box">
+                                    <img src="images/VW.png" width="100px">
+                                    <h3>Volkswagen</h3>
+                                    <p>7.1k sales</p>
+                                </div>
+                         
+                             <div class="box">
+                                     <img src="images/Benz.png" width="100px">
+                                     <h3>Mercedes Benz</h3>
+                                    <p>6.5k sales</p>
+                        </div>       
+                     
+                      <div class="main-btn">
+                        <a href="#" class="btn">Brows All Cars</a>
+                      </div>
+                    
+                 </section>
+                <section  class="shop" id="shop">
+                    <div class="center-text">
+                        <h5>Shop</h5>
+                        <h2>Latest cars</h2>
+                    </div>
+                    <div class="shop-content">
+                        <div class="row">
+                            <img src="images/car1.jpg" alt="">
+                            <div class="shop-text">
+                                <h5>$40,000</h5>
+                                <h3>Toyota camry</h3>
+                                <p>3.5 d5 powerplus momentum 5dr awd beartric estate</p>
+                                <a href="#" class="view-details-link">view-details</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <img src="images/car2.jpg" alt="">
+                            <div class="shop-text">
+                                <h5>$40,000</h5>
+                                <h3>T-Cross 2023</h3>
+                                <p>3.5 d5 powerplus momentum 5dr awd beartric estate</p>
+                                <a href="#" class="view-details-link">view-details</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <img src="images/car3.jpg" alt="">
+                            <div class="shop-text">
+                                <h5>$40,000</h5>
+                                <h3>Audi A6</h3>
+                                <p>3.5 d5 powerplus momentum 5dr awd beartric estate</p>
+                                <a href="#" class="view-details-link">view-details</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <img src="images/car4.jpg" alt="">
+                            <div class="shop-text">
+                                <h5>$40,000</h5>
+                                <h3>Crolla Altis</h3>
+                                <p>3.5 d5 powerplus momentum 5dr awd beartric estate</p>
+                                <a href="#" class="view-details-link">view-details</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <img src="images/car5.jpg" alt="">
+                            <div class="shop-text">
+                                <h5>$40,000</h5>
+                                <h3>Ranger</h3>
+                                <p>3.5 d5 powerplus momentum 5dr awd beartric estate</p>
+                                <a href="#" class="view-details-link">view-details</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <img src="images/car6.jpg" alt="">
+                            <div class="shop-text">
+                                <h5>$40,000</h5>
+                                <h3>Rover Sport</h3>
+                                <p>3.5 d5 powerplus momentum 5dr awd beartric estate</p>
+                                <a href="#" class="view-details-link">view-details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-btn">
+                        <a href="#" class="btn">View All Cars</a>
+                    </div>
+
+
+                </section>
+               
+            <section class="about" id="about">
+                <div class="center-text">
+                    <h5>About Us</h5>
+                    <h2>Why Choose Us</h2>
+                </div>
+
+                <div class="about-content">
+                    <div class="box">
+                        <i class='bx bxs-offer' style='font-size: 40px; color:#405ff2;'></i>
+                        <h3>Special Finance Offers</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            
+                             ipsa voluptatum excepturi? Ad.</p>
+                    </div>
+                    <div class="box">
+                        <i class='bx bxs-star' style='font-size: 40px; color:#405ff2;'></i>
+                        <h3>Special Finance Offers</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.  
+                                
+                                 ipsa voluptatum excepturi? Ad.</p>
+                    </div> 
+                    <div class="box">
+                        <i class='bx bxs-purchase-tag-alt' style='font-size: 40px; color:#405ff2;'></i>
+                        <h3>Special Finance Offers</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.  
+                             ipsa voluptatum excepturi? Ad.</p>
+                    </div>
+                    <div class="box">
+                            <i class='bx bxs-car' style='font-size: 40px; color:#405ff2;'></i>
+                            <h3>Special Finance Offers</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                
+                                ipsa voluptatum excepturi? Ad.</p>
+                     </div>          
+
+                </div> 
+           
+            </section>
+            <section class="Contact" id="Contact">
+                <div class="main-contact">
+                    <div class="Contact-content">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </div>
+
+                    <div class="Contact-content">
+                        
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </div>
+
+                    <div class="Contact-content">
+                        <li><a href="#">Get in Touch</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Terms &  Conditions</a></li>
+                    </div>
+
+
+                    <div class="Contact-content">
+                        <li><a href="#">Monday - Friday: 9:00am - 9:00ppm</a></li>
+                        <li><a href="#">Saturday: 9:00am - 7:00pm</a></li>
+                        <li><a href="#">Sunday: Closed</a></li>
+                       
+                    </div>
+
+                    
+                </div>
+
+            </section>
+
+
+            <!--footer-->
+
+            <footer>
+                <small class="footer">&copy 2024 cardealer.com.All Rights Reserved</small>
+            </footer>
+
+        
+
+
+
+    <!--link to custom js -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
